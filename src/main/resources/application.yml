@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: contract-registry
+  datasource:
+    url: jdbc:postgresql://localhost:5432/contractregistry
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
+server:
+  port: 8080
+
+taurus:
+  api:
+    base-url: https://api.taurus-protect.com
+    auth-endpoint: /v1/auth/token
+    deploy-endpoint: /v1/requests/outgoing_contracts/deploy
+    request-endpoint: /v1/requests
+    approve-endpoint: /v1/requests/approve
+    whitelist-endpoint: /v1/whitelists/addresses-for-approvals
+    whitelist-approve-endpoint: /v1/whitelists/addresses/approve
+    client-id: your-client-id
+    client-secret: your-client-secret
+
+hash-service:
+  api:
+    base-url: https://stt-hash-service.azurewebsites.net
+    sign-endpoint: /api/sign
+
+token-registry:
+  api:
+    base-url: https://stt-token-registry.azurewebsites.net
+    register-endpoint: /api/register

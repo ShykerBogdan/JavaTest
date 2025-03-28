@@ -1,0 +1,46 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.statestreet:contract-registry >------------------
+[INFO] Building contract-registry 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ contract-registry ---
+[INFO] Deleting /Users/bogdanshyker/Documents/StateStreet/JavaSmartContractDeploy/target
+[INFO] 
+[INFO] --- resources:3.2.0:resources (default-resources) @ contract-registry ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ contract-registry ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 18 source files to /Users/bogdanshyker/Documents/StateStreet/JavaSmartContractDeploy/target/classes
+[INFO] 
+[INFO] --- resources:3.2.0:testResources (default-testResources) @ contract-registry ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /Users/bogdanshyker/Documents/StateStreet/JavaSmartContractDeploy/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ contract-registry ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ contract-registry ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.2.2:jar (default-jar) @ contract-registry ---
+[INFO] Building jar: /Users/bogdanshyker/Documents/StateStreet/JavaSmartContractDeploy/target/contract-registry-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:2.7.18:repackage (repackage) @ contract-registry ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- install:2.5.2:install (default-install) @ contract-registry ---
+[INFO] Installing /Users/bogdanshyker/Documents/StateStreet/JavaSmartContractDeploy/target/contract-registry-0.0.1-SNAPSHOT.jar to /Users/bogdanshyker/.m2/repository/com/statestreet/contract-registry/0.0.1-SNAPSHOT/contract-registry-0.0.1-SNAPSHOT.jar
+[INFO] Installing /Users/bogdanshyker/Documents/StateStreet/JavaSmartContractDeploy/pom.xml to /Users/bogdanshyker/.m2/repository/com/statestreet/contract-registry/0.0.1-SNAPSHOT/contract-registry-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.761 s
+[INFO] Finished at: 2025-03-28T16:57:44Z
+[INFO] ------------------------------------------------------------------------
