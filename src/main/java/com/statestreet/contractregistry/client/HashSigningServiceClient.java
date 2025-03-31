@@ -12,13 +12,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Component
-public class HashServiceClient {
+public class HashSigningServiceClient {
 
-    private static final Logger log = LoggerFactory.getLogger(HashServiceClient.class);
+    private static final Logger log = LoggerFactory.getLogger(HashSigningServiceClient.class);
 
     private final RestTemplate restTemplate;
 
-    public HashServiceClient(RestTemplate restTemplate) {
+    public HashSigningServiceClient(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 
@@ -33,24 +33,23 @@ public class HashServiceClient {
      */
     public String signHash(String hash, String metadata) {
         log.info("Sending hash to STT Hash Service for signing");
-        
+
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        
+
         Map<String, String> requestBody = new HashMap<>();
         requestBody.put("hash", hash);
         requestBody.put("metadata", metadata);
-        
+
         HttpEntity<Map<String, String>> requestEntity = new HttpEntity<>(requestBody, headers);
-        
+
         try {
             ResponseEntity<JsonNode> response = restTemplate.exchange(
                     baseUrl + signEndpoint,
                     HttpMethod.POST,
                     requestEntity,
-                    JsonNode.class
-            );
-            
+                    JsonNode.class);
+
             if (response.getStatusCode().is2xxSuccessful() && response.getBody() != null) {
                 String signedHash = response.getBody().path("signed_hash").asText();
                 log.info("Successfully received signed hash from STT Hash Service");
