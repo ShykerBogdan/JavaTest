@@ -1,4 +1,4 @@
-package com.statestreet.contractregistry.statemachine;
+package com.statestreet.contractregistry.statemachine.ContractDeployment;
 
 /**
  * Represents the various states in the smart contract deployment process

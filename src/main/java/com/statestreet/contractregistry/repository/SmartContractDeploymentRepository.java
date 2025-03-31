@@ -1,7 +1,8 @@
 package com.statestreet.contractregistry.repository;
 
 import com.statestreet.contractregistry.model.SmartContractDeployment;
-import com.statestreet.contractregistry.statemachine.DeploymentState;
+import com.statestreet.contractregistry.statemachine.ContractDeployment.DeploymentState;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

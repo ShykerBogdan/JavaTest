@@ -1,4 +1,4 @@
-package com.statestreet.contractregistry.service.impl;
+package com.statestreet.contractregistry.service;
 
 import com.statestreet.contractregistry.client.HashServiceClient;
 import com.statestreet.contractregistry.client.TaurusProtectClient;
@@ -7,9 +7,9 @@ import com.statestreet.contractregistry.dto.DeploymentRequest;
 import com.statestreet.contractregistry.dto.DeploymentResponse;
 import com.statestreet.contractregistry.model.SmartContractDeployment;
 import com.statestreet.contractregistry.repository.SmartContractDeploymentRepository;
-import com.statestreet.contractregistry.service.DeploymentService;
-import com.statestreet.contractregistry.statemachine.DeploymentEvent;
-import com.statestreet.contractregistry.statemachine.DeploymentState;
+import com.statestreet.contractregistry.statemachine.ContractDeployment.DeploymentEvent;
+import com.statestreet.contractregistry.statemachine.ContractDeployment.DeploymentState;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.messaging.Message;

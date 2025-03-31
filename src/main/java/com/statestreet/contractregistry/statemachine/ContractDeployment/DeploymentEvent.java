@@ -1,4 +1,4 @@
-package com.statestreet.contractregistry.statemachine;
+package com.statestreet.contractregistry.statemachine.ContractDeployment;
 
 /**
  * Represents the various events that can trigger state transitions

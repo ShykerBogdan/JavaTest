@@ -1,9 +1,9 @@
 package com.statestreet.contractregistry.model;
 
-import com.statestreet.contractregistry.statemachine.DeploymentState;
-
-
 import javax.persistence.*;
+
+import com.statestreet.contractregistry.statemachine.ContractDeployment.DeploymentState;
+
 import java.time.LocalDateTime;
 
 @Entity

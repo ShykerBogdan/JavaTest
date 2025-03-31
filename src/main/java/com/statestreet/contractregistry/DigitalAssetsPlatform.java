@@ -6,9 +6,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-public class ContractRegistryApplication {
+public class DigitalAssetsPlatform {
 
     public static void main(String[] args) {
-        SpringApplication.run(ContractRegistryApplication.class, args);
+        SpringApplication.run(DigitalAssetsPlatform.class, args);
     }
 }

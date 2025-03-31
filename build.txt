@@ -16,7 +16,7 @@
 [INFO] 
 [INFO] --- compiler:3.10.1:compile (default-compile) @ contract-registry ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 18 source files to /Users/bogdanshyker/Documents/StateStreet/JavaSmartContractDeploy/target/classes
+[INFO] Compiling 49 source files to /Users/bogdanshyker/Documents/StateStreet/JavaSmartContractDeploy/target/classes
 [INFO] 
 [INFO] --- resources:3.2.0:testResources (default-testResources) @ contract-registry ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
@@ -41,6 +41,6 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.761 s
-[INFO] Finished at: 2025-03-28T16:57:44Z
+[INFO] Total time:  2.010 s
+[INFO] Finished at: 2025-03-31T16:05:21+01:00
 [INFO] ------------------------------------------------------------------------

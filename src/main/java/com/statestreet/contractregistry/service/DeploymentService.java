@@ -3,7 +3,7 @@ package com.statestreet.contractregistry.service;
 import com.statestreet.contractregistry.dto.DeploymentRequest;
 import com.statestreet.contractregistry.dto.DeploymentResponse;
 import com.statestreet.contractregistry.model.SmartContractDeployment;
-import com.statestreet.contractregistry.statemachine.DeploymentState;
+import com.statestreet.contractregistry.statemachine.ContractDeployment.DeploymentState;
 
 public interface DeploymentService {
     

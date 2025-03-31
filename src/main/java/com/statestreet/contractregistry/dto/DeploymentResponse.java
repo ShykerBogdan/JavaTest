@@ -1,8 +1,8 @@
 package com.statestreet.contractregistry.dto;
 
-import com.statestreet.contractregistry.statemachine.DeploymentState;
+import java.time.LocalDateTime;
 
-
+import com.statestreet.contractregistry.statemachine.ContractDeployment.DeploymentState;
 
 public class DeploymentResponse {
     
@@ -17,6 +17,16 @@ public class DeploymentResponse {
         
         public Builder requestId(String requestId) {
             instance.requestId = requestId;
+            return this;
+        }
+        
+        public Builder contractName(String contractName) {
+            instance.contractName = contractName;
+            return this;
+        }
+        
+        public Builder status(String status) {
+            instance.status = status;
             return this;
         }
         
@@ -45,17 +55,38 @@ public class DeploymentResponse {
             return this;
         }
         
+        public Builder requestedAt(LocalDateTime requestedAt) {
+            instance.requestedAt = requestedAt;
+            return this;
+        }
+        
+        public Builder approvedAt(LocalDateTime approvedAt) {
+            instance.approvedAt = approvedAt;
+            return this;
+        }
+        
+        public Builder deployedAt(LocalDateTime deployedAt) {
+            instance.deployedAt = deployedAt;
+            return this;
+        }
+        
         public DeploymentResponse build() {
             return instance;
         }
     }
     
     private String requestId;
+    private String contractName;
+    private String status;
     private DeploymentState state;
     private String transactionHash;
     private String contractAddress;
     private String whitelistId;
     private String errorMessage;
+    private LocalDateTime requestedAt;
+    private LocalDateTime approvedAt;
+    private LocalDateTime deployedAt;
+    
     // Getters and setters
     public String getRequestId() {
         return requestId;
@@ -63,6 +94,22 @@ public class DeploymentResponse {
 
     public void setRequestId(String requestId) {
         this.requestId = requestId;
+    }
+    
+    public String getContractName() {
+        return contractName;
+    }
+    
+    public void setContractName(String contractName) {
+        this.contractName = contractName;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public DeploymentState getState() {
@@ -100,9 +147,33 @@ public class DeploymentResponse {
     public String getErrorMessage() {
         return errorMessage;
     }
-
+    
     public void setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
+    }
+    
+    public LocalDateTime getRequestedAt() {
+        return requestedAt;
+    }
+
+    public void setRequestedAt(LocalDateTime requestedAt) {
+        this.requestedAt = requestedAt;
+    }
+
+    public LocalDateTime getApprovedAt() {
+        return approvedAt;
+    }
+
+    public void setApprovedAt(LocalDateTime approvedAt) {
+        this.approvedAt = approvedAt;
+    }
+
+    public LocalDateTime getDeployedAt() {
+        return deployedAt;
+    }
+
+    public void setDeployedAt(LocalDateTime deployedAt) {
+        this.deployedAt = deployedAt;
     }
     
     // No-args constructor
@@ -110,13 +181,18 @@ public class DeploymentResponse {
     }
     
     // All-args constructor
-    public DeploymentResponse(String requestId, DeploymentState state, String transactionHash, 
-                           String contractAddress, String whitelistId, String errorMessage) {
+    public DeploymentResponse(String requestId, String contractName, String status, DeploymentState state, String transactionHash, 
+                           String contractAddress, String whitelistId, String errorMessage, LocalDateTime requestedAt, LocalDateTime approvedAt, LocalDateTime deployedAt) {
         this.requestId = requestId;
+        this.contractName = contractName;
+        this.status = status;
         this.state = state;
         this.transactionHash = transactionHash;
         this.contractAddress = contractAddress;
         this.whitelistId = whitelistId;
         this.errorMessage = errorMessage;
+        this.requestedAt = requestedAt;
+        this.approvedAt = approvedAt;
+        this.deployedAt = deployedAt;
     }
 }
