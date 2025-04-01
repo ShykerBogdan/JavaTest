@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: contract-registry-app
+    ports:
+      - "8080:8080"
+      - "5005:5005"  # Debug port
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/contractregistry
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - WAIT_HOSTS=db:5432
+    depends_on:
+      - db
+    volumes:
+      - ./src:/app/src  # For hot reload of code changes
+    networks:
+      - contract-network
+
+  db:
+    image: postgres:14
+    container_name: contract-registry-db
+    environment:
+      - POSTGRES_DB=contractregistry
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - contract-network
+
+networks:
+  contract-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
